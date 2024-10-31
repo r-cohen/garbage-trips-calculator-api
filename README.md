@@ -31,3 +31,8 @@ Example response JSON data format:
     "minNumberOfTrips": 5
 }
 ```
+
+## Sample app hosted url
+```
+https://garbage-trips-calculator-api.onrender.com/calculate_min_trips
+```
