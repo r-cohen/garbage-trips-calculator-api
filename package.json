@@ -1,0 +1,14 @@
+{
+  "name": "garbage-trips-calc-api",
+  "version": "1.0.0",
+  "description": "Calculates the minimum trips for a collection of garbage weights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
