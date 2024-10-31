@@ -10,3 +10,24 @@ npm install
 ```
 node index.js
 ```
+
+## Sample usage request
+```
+curl --location 'http://localhost:3000/calculate_min_trips' \
+--header 'Content-Type: application/json' \
+--data '{
+    "bagWeights": [1.01, 1.02, 3, 1.01, 1.01, 1.01, 2.2, 1.01]
+}'
+```
+Request JSON data format:
+```json
+{
+    "bagWeights": [1.01, 1.02, 3, 1.01, 1.01, 1.01, 2.2, 1.01]
+}
+```
+Example response JSON data format:
+```json
+{
+    "minNumberOfTrips": 5
+}
+```
