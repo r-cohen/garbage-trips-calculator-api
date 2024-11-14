@@ -59,7 +59,7 @@ const calcMinTrips = (weightsArray) => {
     // in this solution we use 2 cursors: one at the beginning of the array (lightest bags) and another one at the end (heaviest)
     while (start <= end) {
         // check for combined heaviest with lightest ones exceeds max weight
-        if (weightsArray[start] + weightsArray[right] <= 3.0) {
+        if (weightsArray[start] + weightsArray[end] <= 3.0) {
             start++;
         }
 
