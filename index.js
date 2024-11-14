@@ -52,16 +52,21 @@ const calcMinTrips = (weightsArray) => {
     // sort ascending
     weightsArray.sort((a, b) => a - b);
     
-    let numberOfTrips = 1; // at least 1 trip, since the array is not empty
-    let tripWeight = 0.0; // the additive weight of the trip
+    let numberOfTrips = 0;
+    let start = 0; // index for iterating from the start of the array
+    let end = weightsArray.length - 1; // index for iterating from the end of the array
 
-    for (const weight of weightsArray) {
-        if (tripWeight + weight <= 3.0) {
-            tripWeight += weight;
-        } else {
-            tripWeight = weight;
-            numberOfTrips++;
+    // in this solution we use 2 cursors: one at the beginning of the array (lightest bags) and another one at the end (heaviest)
+    while (start <= end) {
+        // check for combined heaviest with lightest ones
+        if (weightsArray[start] + weightsArray[right] <= 3.0) {
+            start++;
         }
+
+        // move end index cursor -> increment number of trips 
+        end--;
+        numberOfTrips++;
     }
+
     return numberOfTrips;
 };
